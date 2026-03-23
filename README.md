@@ -189,6 +189,21 @@ Agregamos esto en el archivo  **pom.xml** dentro de "dependencies":
 Como ya se creo el archivo .gitignore, se  verifica que tenga la línea .env. Así, cuando hagas git push, la contraseña se quedará solo en la computadora y en GitHub el archivo application.properties mostrará ${DB_PASSWORD}, manteniendo tu base de datos protegida.
 ![alt text](image-2.png)
 
+---
+# Codificación de la Entidad Producto.java
+### 👨‍🏫 ¿Qué es una Entidad en Spring Boot?
+
+En el desarrollo con JPA (Java Persistence API), una "Entidad" es una clase Java que representa una tabla en la base de datos. Gracias a la configuración ddl-auto=update que hicimos en el Paso 2, al escribir esta clase, Spring Boot creará la tabla en PostgreSQL por ti.
+
+### 🛠️ Codificación de Producto.java
+Ubícaremos  en la carpeta: 
+```
+src/main/java/com/miempresa/tienda/model/
+``` 
+
+
+
+
 
 
 
