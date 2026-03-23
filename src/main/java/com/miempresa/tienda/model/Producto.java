@@ -29,6 +29,16 @@ public class Producto {
 
     private Boolean disponible;
 
+        // Relación: Muchos productos pertenecen a una categoría
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
+
+    // No olvides agregar su Getter y Setter
+    public Categoria getCategoria() { return categoria; }
+    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+
+
     // --- CONSTRUCTORES ---
 
     // Constructor vacío (Obligatorio para que JPA funcione)

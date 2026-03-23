@@ -199,7 +199,33 @@ En el desarrollo con JPA (Java Persistence API), una "Entidad" es una clase Java
 Ubícaremos  en la carpeta: 
 ```
 src/main/java/com/miempresa/tienda/model/
+```
+---
+
+### 🛠️ Crear la Entidad Categoria.java
+Antes del repositorio, necesitamos crear la tabla de categorías. Este archivo lo crearemos en:
+```
+model/Categoria.java
 ``` 
+---
+
+### 🛠️  Actualizar Producto.java con @ManyToOne
+
+Añadiremos este campo dentro de la clase Producto para crear la Llave Foránea (Foreign Key):
+```
+    // Relación: Muchos productos pertenecen a una categoría
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
+
+    // No olvides agregar su Getter y Setter
+    public Categoria getCategoria() { return categoria; }
+    public void setCategoria(Categoria categoria) { this.categoria = categoria; }
+
+``` 
+
+
+
 
 
 
