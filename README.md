@@ -195,21 +195,21 @@ Como ya se creo el archivo .gitignore, se  verifica que tenga la línea .env. As
 
 En el desarrollo con JPA (Java Persistence API), una "Entidad" es una clase Java que representa una tabla en la base de datos. Gracias a la configuración ddl-auto=update que hicimos en el Paso 2, al escribir esta clase, Spring Boot creará la tabla en PostgreSQL por ti.
 
-### 🛠️ Codificación de Producto.java
-Ubícaremos  en la carpeta: 
+### 🛠️ Paso 1: Codificación de Producto.java
+Nos ubícaremos  en la carpeta: 
 ```
 src/main/java/com/miempresa/tienda/model/
 ```
 ---
 
-### 🛠️ Crear la Entidad Categoria.java
+### 🛠️ Paso 2: Crear la Entidad Categoria.java
 Antes del repositorio, necesitamos crear la tabla de categorías. Este archivo lo crearemos en:
 ```
 model/Categoria.java
 ``` 
 ---
 
-### 🛠️  Actualizar Producto.java con @ManyToOne
+### 🛠️ PAso 3: Actualizar Producto.java con @ManyToOne
 
 Añadiremos este campo dentro de la clase Producto para crear la Llave Foránea (Foreign Key):
 ```
@@ -223,6 +223,20 @@ Añadiremos este campo dentro de la clase Producto para crear la Llave Foránea 
     public void setCategoria(Categoria categoria) { this.categoria = categoria; }
 
 ``` 
+
+### 🛠️ Paso 4: Crear los Repositorios (Interfaces)
+En la carpeta ***src/main/java/com/miempresa/tienda/repository/***, se crean estos dos archivos. Son interfaces que heredan de JpaRepository, lo que  dará  a todos los métodos (guardar, eliminar, buscar) automáticamente.
+
+---
+###  Paso 5: Crear la Capa de Servicio (Service).
+#### 🧠 ¿Qué es la Capa de Servicio?
+
+Es el lugar donde reside la lógica de negocio. Aquí es donde se cumplen las  Historias de Usuario. Por ejemplo, para la HU-04 (Gestionar inventario), no basta con guardar un producto; hay que validar si hay stock antes de venderlo.
+
+#### 🛠️ Paso 5.1: Crear ProductoService.java
+Nos ubícaremos en la carpeta: ***src/main/java/com/miempresa/tienda/service/*** y crea el archivo.
+
+
 
 
 
