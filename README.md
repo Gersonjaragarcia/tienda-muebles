@@ -235,6 +235,53 @@ Es el lugar donde reside la lógica de negocio. Aquí es donde se cumplen las  H
 
 #### 🛠️ Paso 5.1: Crear ProductoService.java
 Nos ubícaremos en la carpeta: ***src/main/java/com/miempresa/tienda/service/*** y crea el archivo.
+![codigodel archivo ProductoService.java](image-3.png)
+
+#### 🚀 Paso 6: Crear el Controlador (Capa de Presentación)
+Para completar el ciclo y se pueda observar el catálogo en el navegador **(cumpliendo con la HU-02)**, necesitamos el **Controlador**. Este recibirá las peticiones de los usuarios y les entregará la lista de muebles.
+Crearemos el archivo ***ProductoController.java*** en la carpeta:
+```
+src/main/java/com/miempresa/tienda/controller/
+``` 
+
+---
+# 🚀 Instrucciones de Ejecución
+Siga estos pasos para poner en marcha el sistema de Muebles y Artesanías:
+
+1. **Requisitos Previos**
+ - Tener instalado **PostgreSQL** y crear una base de datos llamada **muebles_db.**
+
+ - Configurar el archivo ***.env*** en la raíz con la variable ***DB_PASSWORD=tu_contraseña.***
+
+2. **Lanzar la Aplicación**
+Abra una terminal en la raíz del proyecto y ejecute:
+```
+./mvnw spring-boot:run
+
+``` 
+
+3.** Acceso al Sistema (Seguridad)**
+Al iniciar, Spring Boot genera una contraseña de seguridad aleatoria en la consola.
+
+### 📸 Evidencia de Ejecución Exitosa
+![Log de Consola - Creación de Estructura de BD](image-4.png)
+
+---
+#### Estado del Servidor:
+* **Puerto:** 8080 (HTTP)
+* **Base de Datos:** PostgreSQL (muebles_db)
+* **Estado:** Online y Operativo
+---
+### 🛡️ Implementación de Seguridad (Autenticación)
+Para cumplir con los estándares de seguridad y protección de datos, se ha integrado **Spring Security**. Al intentar acceder a los recursos del catálogo, el sistema redirige automáticamente al formulario de inicio de sesión, garantizando que solo personal autorizado (Administradores o Clientes registrados) acceda a la información.
+
+---
+
+#### Evidencia de Interfaz de Acceso:
+![Interfaz de Login - Muebles y Artesanías](image-5.png)
+
+
+
 
 
 
