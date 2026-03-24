@@ -275,12 +275,35 @@ Al iniciar, Spring Boot genera una contraseña de seguridad aleatoria en la cons
 ### 🛡️ Implementación de Seguridad (Autenticación)
 Para cumplir con los estándares de seguridad y protección de datos, se ha integrado **Spring Security**. Al intentar acceder a los recursos del catálogo, el sistema redirige automáticamente al formulario de inicio de sesión, garantizando que solo personal autorizado (Administradores o Clientes registrados) acceda a la información.
 
+### 🧪 La Prueba Final
+Una vez que en la consola diga Tomcat started on port 8080:
+
+ 1. Abre tu navegador en http://localhost:8080/api/productos.
+
+ 2. En el formulario de login, escribe:
+    1. User: admin
+    2. Password: admin123
+
 ---
 
-#### Evidencia de Interfaz de Acceso:
+### Evidencia de Interfaz de Acceso:
 ![Interfaz de Login - Muebles y Artesanías](image-5.png)
 
+---
 
+
+### ✅ Evidencia de Funcionamiento del Catálogo (Endpoint API)
+Al acceder a la ruta `http://localhost:8080/api/productos` tras la autenticación exitosa, el sistema responde correctamente con un objeto JSON vacío `[]`.
+
+Esto valida que:
+ - La arquitectura de **3 capas** está integrada correctamente.
+
+ - El **Controlador** recibe la petición y se comunica con el **Servicio**.
+
+  - El **Servicio** consulta el **Repositorio** y este accede a la base de datos sin errores.
+
+ - La seguridad de **Spring Security** permite el acceso a usuarios autorizados.
+![Evidencia de Catálogo Operativo](image-6.png)
 
 
 
