@@ -1,0 +1,25 @@
+🚀 PROYECTO: SISTEMA DE GESTIÓN "MUEBLES Y ARTESANÍAS" 🪑
+===========================================================
+Evidencia: GA7-220501096-AA3-EV01
+
+¡Hola, Instructora! 
+
+He completado la codificación de los módulos del software utilizando el framework Spring Boot y una arquitectura profesional de 3 capas. 
+
+Puede explorar el código fuente, la documentación técnica y las evidencias de ejecución en el siguiente repositorio oficial:
+
+🔗 ENLACE AL REPOSITORIO:
+https://github.com/Gersonjaragarcia/tienda-muebles.git
+
+-----------------------------------------------------------
+PUNTOS CLAVE DEL REPOSITORIO:
+✅ README.md detallado con capturas de pantalla.
+✅ Implementación de Spring Security (Login).
+✅ Estructura de carpetas bajo estándar Maven.
+✅ Manejo seguro de credenciales (.env).
+
+¡Espero que el proyecto cumpla con todas sus expectativas!
+-----------------------------------------------------------
+Atentamente,
+[Gerson Jaramillo]
+Aprendiz ADSO - SENA
