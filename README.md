@@ -56,17 +56,25 @@ Codificar los módulos funcionales del software de Muebles y Artesanías, integr
 # 📂 Estructura de Carpetas
 ```
 tienda/
-├── src/main/java/com/miempresa/tienda/
-│   ├── model/         # Entidades del sistema (Datos)
-│   ├── repository/    # Interfaces de acceso a DB
-│   ├── service/       # Lógica de negocio (Servicios)
-│   └── controller/    # Puntos de entrada (API/Web)
-├── src/main/resources/
-│   └── application.properties # Configuración del servidor
-├── .env               # Variables sensibles (Ignorado por Git)
-├── .gitignore         # Reglas de exclusión de archivos
-├── pom.xml            # Gestor de dependencias Maven
-└── README.md          # Documentación técnica
+├── .mvn/                # Archivos de configuración de Maven Wrapper
+├── src/
+│   ├── main/
+│   │   ├── java/com/miempresa/tienda/
+│   │   │   ├── controller/    # Capa de Presentación (Endpoints API)
+│   │   │   ├── model/         # Capa de Datos (Entidades JPA)
+│   │   │   ├── repository/    # Capa de Persistencia (Interfaces JPA)
+│   │   │   ├── service/        # Capa de Lógica de Negocio (Servicios)
+│   │   │   └── TiendaApplication.java # Clase Principal (Main)
+│   │   └── resources/
+│   │       ├── static/        # Archivos estáticos (CSS/JS)
+│   │       ├── templates/     # Plantillas HTML (Thymeleaf)
+│   │       └── application.properties # Configuración de Spring y DB
+│   └── test/                # Pruebas unitarias y de integración
+├── .env                     # Variables de entorno (Contraseñas - Ignorado por Git)
+├── .gitignore               # Reglas de exclusión para Git
+├── pom.xml                  # Gestor de dependencias Maven
+└── README.md                # Documentación técnica del proyecto
+
 
 ``` 
 
