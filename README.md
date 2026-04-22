@@ -313,6 +313,102 @@ Esto valida que:
  - La seguridad de **Spring Security** permite el acceso a usuarios autorizados.
 ![Evidencia de Catálogo Operativo](image-6.png)
 
+🧪  Pruebas del Sistema **(Evidencia EV02)**
+En cumplimiento de la evidencia **GA7-220501096-AA3-EV02**, se realizaron pruebas funcionales al módulo desarrollado, validando el comportamiento del sistema a partir de las historias de usuario definidas.
+
+---
+
+🧩 Metodología de Pruebas
+Se aplicaron pruebas de tipo:
+
+- ✔ Pruebas funcionales
+- ✔ Validación de entradas de usuario
+- ✔ Pruebas de integración (Frontend + Backend + BD)
+
+El sistema fue evaluado utilizando formularios web desarrollados con Thymeleaf y servicios REST en Spring Boot.
+
+---
+
+🧾 Historias de Usuario Probadas
+🔹 ***HU-01: Registro de Pedido***
+### Descripción:
+Permite al usuario registrar un pedido en el sistema mediante un formulario web.
+
+---
+
+🧪 **Caso de Prueba 1: Registro exitoso**
+### Entrada:
+ - Fecha válida
+ - ID de producto existente
+ - Cantidad numérica válida
+ - Precio válido
+
+### Resultado esperado:
+El sistema guarda el pedido correctamente.
+
+### Resultado obtenido:
+ - ✔ Registro exitoso (HTTP 200 OK)
+
+### 📸 Evidencia de Prueba API
+Se realiza una petición POST al endpoint `/api/pedidos` con datos válidos.
+```
+json
+{
+  "fecha": "2024-04-13",
+  "detalles": [
+    {
+      "cantidad": 1,
+      "precio": 500.0,
+      "producto": {
+        "id": 2
+      }
+    }
+  ]
+}
+```
+
+![Prueba API Pedido](imagen/image_prueba.png)
+
+---
+
+## 🧪 ❌ Prueba de Error – Internal Server Error (500)
+
+Se realizó una petición al endpoint /api/pedidos con datos que generan un fallo en el servidor.
+
+### 📥 ***Request enviado***
+
+```
+{
+  "fecha": "2024-04-22",
+  "detalles": [
+    {
+      "cantidad": 10,
+      "precio": 50.0,
+      "producto": {
+        "id": 2
+      }
+    }
+  ]
+}
+```
+### 📤 **Respuesta del servidor**
+
+```
+{
+  "timestamp": "2026-04-22T02:10:56.491+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/api/pedidos"
+}
+```
+
+### 📸 **Evidencia**
+![Error 500 en API](imagen/image_error.png)
+
+---
+
+
+
 
 
 
