@@ -403,7 +403,7 @@ Se realizó una petición al endpoint /api/pedidos con datos que generan un fall
 ```
 
 ### 📸 **Evidencia**
-![Error 500 en API](imagen/image_error.png)
+![Error 500 en API](imagen/imagen_error.png)
 
 ---
 
